@@ -11,7 +11,7 @@ class StudentController extends Controller
         return "Hello from Student Controller";
     }
 
-    public function teacher(){
-        return 'Hello from Teacher Controller';
+    public function teacher($id, $name){
+        return view('teacher', ['id' => $id, 'name' => $name]);
     }
 }

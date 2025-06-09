@@ -76,3 +76,6 @@ Route::controller(StudentController::class)->group(function () {
     Route::get('teacher', 'teacher');
     // Route to display student details
 });
+
+// with param of teacher transfer  to  controller
+Route::get('teacher/{id}/{name}', [StudentController::class, 'teacher']);
