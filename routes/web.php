@@ -2,6 +2,9 @@
 
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -62,8 +65,6 @@ Route::view('contactus', 'contactus', ['name' => 'name', 'email' => 'email']);
 
 
 // controller route
-use App\Http\Controllers\StudentController;
-
 // without grouping
 // Route::get('student1', [StudentController::class, 'index']);
 // Route::get('teacher', [StudentController::class, 'teacher']);
@@ -79,3 +80,11 @@ Route::controller(StudentController::class)->group(function () {
 
 // with param of teacher transfer  to  controller
 Route::get('teacher/{id}/{name}', [StudentController::class, 'teacher']);
+
+// Resource route for products
+Route::resource('products', ProductController::class);
+
+// Invoke route for home
+Route::get('/home', HomeController::class);
+
+
