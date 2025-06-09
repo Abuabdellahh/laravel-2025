@@ -74,4 +74,5 @@ Route::controller(StudentController::class)->group(function () {
     Route::get('student1', 'index');
     // Route to display teacher page
     Route::get('teacher', 'teacher');
+    // Route to display student details
 });
