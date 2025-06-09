@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -58,3 +59,19 @@ Route::get('contactus/{name}/{email}', function ($name,$email) {
 
 // route view
 Route::view('contactus', 'contactus', ['name' => 'name', 'email' => 'email']);
+
+
+// controller route
+use App\Http\Controllers\StudentController;
+
+// without grouping
+// Route::get('student1', [StudentController::class, 'index']);
+// Route::get('teacher', [StudentController::class, 'teacher']);
+// with grouping
+// Group all student controller routes
+Route::controller(StudentController::class)->group(function () {
+    // Route to display student index page
+    Route::get('student1', 'index');
+    // Route to display teacher page
+    Route::get('teacher', 'teacher');
+});

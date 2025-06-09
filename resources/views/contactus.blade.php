@@ -24,6 +24,11 @@
   <h2>{{$name}}</h2>
   <h2>{{$email}}</h2>
 
+  @include('SubViews.input' ,[
+    "name"=>$name
+    ])
+
+    
  
 <!-- @if(isset($i) && $i <= 6)
     <h1>{{ $i }}</h1>
