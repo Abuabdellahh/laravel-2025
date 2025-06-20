@@ -97,6 +97,8 @@ Route::get('/addEmployee', [EmployeeController::class, 'addEmployee']);
 Route::get('/showEmployee/{id}', [EmployeeController::class, 'showEmployee']);
 // Route::put('/addEmployee', [EmployeeController::class, 'addEmployee']);
 Route::get('/updateEmployee/{id}', [EmployeeController::class, 'updateEmployee']);
-Route::delete('/deleteEmployee/{id}', [EmployeeController::class, 'deleteEmployee']);
+// delete route
+// Route::delete('/deleteEmployee/{id}', [EmployeeController::class, 'deleteEmployee']);
+Route::get('/deleteEmployee/{id}', [EmployeeController::class, 'deleteEmployee']);
 
 
