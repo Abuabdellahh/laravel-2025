@@ -48,7 +48,7 @@ class EmployeeController extends Controller
     {
         $employee = Employee::findOrFail($id);
         $employee->name = "Meded";
-        $employee->save();
+        $employee->update();
         return response()->json([
             'message' => 'Employee updated successfully'
         ], 200);
