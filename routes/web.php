@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeacherController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -87,4 +88,5 @@ Route::resource('products', ProductController::class);
 // Invoke route for home
 Route::get('/home', HomeController::class);
 
+Route::get('/teacher', [TeacherController::class, 'index']);
 
