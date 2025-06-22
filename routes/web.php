@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TeacherController;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -89,4 +90,17 @@ Route::resource('products', ProductController::class);
 Route::get('/home', HomeController::class);
 
 Route::get('/teacher', [TeacherController::class, 'index']);
+
+use App\Http\Controllers\EmployeeController;
+
+Route::get('/employee', [EmployeeController::class, 'index']);
+// Route::post('/addEmployee', [EmployeeController::class, 'addEmployee']);
+Route::get('/addEmployee', [EmployeeController::class, 'addEmployee']);
+Route::get('/showEmployee/{id}', [EmployeeController::class, 'showEmployee']);
+// Route::put('/addEmployee', [EmployeeController::class, 'addEmployee']);
+Route::get('/updateEmployee/{id}', [EmployeeController::class, 'updateEmployee']);
+// delete route
+// Route::delete('/deleteEmployee/{id}', [EmployeeController::class, 'deleteEmployee']);
+Route::get('/deleteEmployee/{id}', [EmployeeController::class, 'deleteEmployee']);
+
 
