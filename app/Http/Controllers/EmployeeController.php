@@ -29,39 +29,31 @@ class EmployeeController extends Controller
             'message' => 'Employee added successfully'
         ], 201);
     }
+    
     public function showEmployee($id)
     {
         $employee = Employee::findOrFail($id);
-        if (!$employee) {
-            return response()->json([
-                'message' => 'Employee not found'
-            ], 404);
-        }
         return response()->json([
             'employee' => $employee
         ], 200);
     }
 
-
-
     public function updateEmployee(Request $request, $id)
     {
         $employee = Employee::findOrFail($id);
         $employee->name = "Meded";
-        $employee->update();
+        $employee->save();
+        
         return response()->json([
             'message' => 'Employee updated successfully'
         ], 200);
-
-        // $employee->update($request->all());
-        // return response()->json([
-        //     'message' => 'Employee updat        $employeeed successfully'
-        // ], 200);
     }
+    
     public function deleteEmployee($id)
     {
         $employee = Employee::findOrFail($id);
         $employee->delete();
+        
         return response()->json([
             'message' => 'Employee deleted successfully'
         ], 200);

@@ -11,7 +11,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return "Products index page";
     }
 
     /**
@@ -19,7 +19,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return "Create product form";
     }
 
     /**
@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "Product stored successfully";
     }
 
     /**
@@ -35,7 +35,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return "Show product with ID: {$id}";
     }
 
     /**
@@ -43,7 +43,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return "Edit product with ID: {$id}";
     }
 
     /**
@@ -51,7 +51,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return "Product with ID {$id} updated successfully";
     }
 
     /**
@@ -59,6 +59,6 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return "Product with ID {$id} deleted successfully";
     }
 }

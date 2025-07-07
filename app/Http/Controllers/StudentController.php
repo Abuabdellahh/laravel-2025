@@ -20,14 +20,8 @@ class StudentController extends Controller
         
         $name = $this->helloWorld();  
         return $name;
-        return "Hello from Student Controller";
-      }
+    }
     public function teacher($id, $name){
-
-        //   from constructor
-        // return $this->name;
-        return $this->age;
-        return  $this->name; 
         return view('teacher', ['id' => $id, 'name' => $name]);
     }
 
