@@ -67,4 +67,10 @@ Route::fallback(function () {
     return "Page not found";
 });
 
-
+use App\Http\Controllers\UsingQueryBuilderController;
+// Using Query Builder
+Route::get('/addQueryBuilder', [UsingQueryBuilderController::class, 'addQueryBuilder']);
+// getData Using Query Builder
+Route::get('/getData', [UsingQueryBuilderController::class, 'getData']);
+Route::get('/updateData', [UsingQueryBuilderController::class, 'updateData']);
+Route::get('/deleteData', [UsingQueryBuilderController::class, 'deleteData']);
