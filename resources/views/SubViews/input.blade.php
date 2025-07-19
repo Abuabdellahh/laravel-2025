@@ -1,7 +1,4 @@
-
-<div class="form-group">
-    <input type="text" class="form-control" name="input" id="input" placeholder="Enter input"
-
-    required value="{{$name}}"
-    >
+<div>
+    <label>Name</label>
+    <input type="text" name="name" required value="{{ $myName }}" />
 </div>
